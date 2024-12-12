@@ -198,7 +198,18 @@ class Field:
 
     def __get_cell(self, position:tuple):
         '''
+        Ищет клетку, которая содержит точку, заданную в параметре `position`.
+    
+        Этот метод проверяет все клетки на наличие столкновения с точкой, переданной
+        в параметре `position`. Если такая клетка найдена, она возвращается. В противном
+        случае возвращается `None`.
 
+        :param position: Кортеж, содержащий координаты точки (x, y), которую нужно проверить.
+        :type position: tuple
+
+        :returns: Клетка, в которой находится указанная точка, или None, если клетка не найдена.
+        :rtype: Union[Cell, None]
+        
         '''
         for cell in self.__all_cells:
             if cell.rect.collidepoint(position):
@@ -313,7 +324,7 @@ class Hand(Field):
         :raises TypeError: Если параметры не соответствуют ожидаемым типам (например, если передаются значения неправильного типа).
         
         '''
-        super().__init__()
+        #super().__init__()
         self.__screen = parent_surface
         self.__hand_table = board_data.handboard
         self.__count = cell_count
@@ -415,14 +426,17 @@ class Hand(Field):
 
     def __setup_board(self):
         '''
+        Инициализирует и настраивает игровое поле, создавая знаки для каждой ячейки,
+        если значение в таблице отличается от нуля, и размещая их на соответствующих ячейках.
+
+        Метод проходит по всем строкам таблицы `__hand_table`, создает знаки для ненулевых значений
+        и добавляет их в коллекцию `__all_signs`. Затем для каждого знака определяется
+        его положение на поле, основываясь на совпадении имени поля с ячейкой в `__all_hand_cells`.
+
+        :returns: None
+        :rtype: None
+        :raises TypeError: Если `__hand_table` или `__all_hand_cells` имеют неправильный тип данных.
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         for j, row in enumerate(self.__hand_table):
             for i, field_value in enumerate(row):
@@ -437,14 +451,22 @@ class Hand(Field):
 
     def __create_sign(self, sign_symbol: str, table_coord: tuple):
         '''
+        Создает объект знака (например, фигуру на игровом поле) на основе символа и координат в таблице.
+
+        Метод принимает символ знака и его координаты на игровом поле, затем находит соответствующий 
+        тип знака, использует его для создания экземпляра класса знака и возвращает его.
+
+        :param sign_symbol: Символ, представляющий тип знака, например, 'X' или 'O'.
+        :type sign_symbol: str
+        :param table_coord: Координаты (строка, столбец) ячейки на поле, где должен быть размещен знак.
+        :type table_coord: tuple
+
+        :returns: Экземпляр класса знака, соответствующего типу, определенному `sign_symbol`.
+        :rtype: object (например, экземпляр класса Sign_0 или другого типа знака)
+
+        :raises KeyError: Если `sign_symbol` не найден в словаре `__signs_types`.
+        :raises TypeError: Если типы переданных параметров некорректны.
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         field_name = self.__to_field_name(table_coord)
         sign_tuple = self.__signs_types[sign_symbol]
@@ -454,27 +476,37 @@ class Hand(Field):
 
     def __to_field_name(self, table_coord: tuple):
         '''
+        Находит клетку, в которую попадает указатель мыши, на основе координат.
+
+        Метод проверяет каждую клетку в коллекции `__all_hand_cells` и возвращает клетку,
+        чье прямоугольное ограничение (`rect`) содержит точку, заданную координатами `position`.
+
+        :param position: Координаты (x, y) точки на экране, где проверяется наличие клетки.
+        :type position: tuple
+
+        :returns: Клетка, в которую попадает точка. Если клетка не найдена, возвращается None.
+        :rtype: object (клетка из коллекции `__all_hand_cells` или None)
+
+        :raises TypeError: Если `position` не является кортежем из двух чисел (x, y).
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         return 'H' + str(self.__hand_count_lines - table_coord[0]) + str(self.__hand_count_elements - table_coord[1])
 
     def __get_hand_cell(self, position:tuple):
         '''
+        Находит клетку, в которую попадает указатель мыши, на основе координат.
+
+        Метод проверяет каждую клетку в коллекции `__all_hand_cells` и возвращает клетку,
+        чье прямоугольное ограничение (`rect`) содержит точку, заданную координатами `position`.
+
+        :param position: Координаты (x, y) точки на экране, где проверяется наличие клетки.
+        :type position: tuple
+
+        :returns: Клетка, в которую попадает точка. Если клетка не найдена, возвращается None.
+        :rtype: object (клетка из коллекции `__all_hand_cells` или None)
+
+        :raises TypeError: Если `position` не является кортежем из двух чисел (x, y).
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         for hand_cell in self.__all_hand_cells:
             if hand_cell.rect.collidepoint(position):
@@ -484,14 +516,22 @@ class Hand(Field):
     
     def btn_down(self, button_type: int, position: tuple):
         '''
+        Обрабатывает событие нажатия кнопки мыши. Сохраняет клетку, на которой произошло нажатие.
+
+        Когда кнопка мыши нажата, метод сохраняет клетку, над которой находится курсор, в 
+        переменной `__pressed_hand_cell`. Это позволяет отслеживать, на какой клетке 
+        было сделано нажатие для последующих операций.
+
+        :param button_type: Тип кнопки мыши, которая была нажата. Например, 1 — это левая кнопка.
+        :type button_type: int
+        :param position: Координаты (x, y) точки на экране, где была нажата кнопка.
+        :type position: tuple
+
+        :returns: None
+        :rtype: None
+        :raises TypeError: Если переданные параметры имеют неправильный тип или если `position` 
+                        не является кортежем с двумя числами.
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         self.__pressed_hand_cell = self.__get_hand_cell(position)
 
@@ -499,14 +539,23 @@ class Hand(Field):
     
     def btn_up(self, button_type: int, position:tuple):
         '''
+        Обрабатывает событие отпускания кнопки мыши на экране. В зависимости от типа кнопки 
+        и выбранной клетки, выполняет определенные действия, такие как выбор или перемещение знака.
+
+        Если кнопка мыши была отпущена над выбранной клеткой, и если тип кнопки соответствует 
+        правой кнопке мыши (button_type == 1), метод пытается выбрать знак для перемещения 
+        или обновления его позиции.
+
+        :param button_type: Тип кнопки мыши, которая была отпущена. Например, 1 — это левая кнопка.
+        :type button_type: int
+        :param position: Координаты (x, y) точки на экране, где была отпущена кнопка.
+        :type position: tuple
+
+        :returns: None
+        :rtype: None
+        :raises TypeError: Если переданные параметры имеют неправильный тип или если 
+                        `released_hand_cell` не поддерживает нужные методы.
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         released_hand_cell = self.__get_hand_cell(position)
         if (released_hand_cell is not None) and (released_hand_cell == self.__pressed_hand_cell):
@@ -516,14 +565,20 @@ class Hand(Field):
 
     def __pick_hand_cell(self,hand_cell):
         '''
+        Обрабатывает выбор клетки для знака. Если знак ещё не выбран, то метод выбирает знак для перемещения.
+        Если знак уже выбран, он перемещается в новую клетку.
+
+        Метод проверяет, выбран ли уже какой-либо знак. Если знак ещё не выбран, он ищет знак, 
+        чье поле совпадает с полем клетки (`hand_cell`) и выбирает его. Если знак уже выбран, 
+        его позиция обновляется на основе клетки, и выбор сбрасывается.
+
+        :param hand_cell: Клетка, с которой взаимодействует пользователь.
+        :type hand_cell: object (предполагается, что объект клетки имеет атрибуты `rect` и `field_name`)
+
+        :returns: None
+        :rtype: None
+        :raises TypeError: Если параметр `hand_cell` не имеет необходимых атрибутов (`rect`, `field_name`).
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         if self.__picked_hand_sign is None:
             for sign in self.__all_signs:
@@ -537,14 +592,15 @@ class Hand(Field):
 
     def __grand_update(self):
         '''
+        Обновляет экран, рисуя все клетки и знаки на поле, а затем обновляет отображение.
+
+        Метод вызывает метод `draw` для всех клеток и знаков, которые находятся в коллекциях `__all_hand_cells` и `__all_signs`,
+        соответственно. После этого обновляется экран, чтобы отобразить все изменения.
+
+        :returns: None
+        :rtype: None
+        :raises TypeError: Если объекты в `__all_hand_cells` или `__all_signs` не поддерживают метод `draw` или имеют некорректный тип.
         
-
-        :param number: 
-        :type number:
-        :returns: 
-        :rtype: 
-        :raises TypeError: 
-
         '''
         self.__all_hand_cells.draw(self.__screen)
         self.__all_signs.draw(self.__screen)

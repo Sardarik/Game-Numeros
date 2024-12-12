@@ -4,6 +4,21 @@ from configurations import *
 
 class Sign(pg.sprite.Sprite):
     def __init__(self, cell_size: int, points: str, field_name: str, file_name: str):
+        '''
+        Инициализирует объект с изображением, которое загружается и масштабируется,
+        а также сохраняет переданные параметры для дальнейшего использования.
+
+        :param cell_size: Размер клетки, на который будет масштабировано изображение.
+        :type cell_size: int
+        :param points: Строка, содержащая информацию о баллах или другой информации, связанной с объектом.
+        :type points: str
+        :param field_name: Название поля, к которому относится объект.
+        :type field_name: str
+        :param file_name: Имя файла изображения, которое будет загружено.
+        :type file_name: str
+
+        :raises TypeError: Если типы переданных аргументов не соответствуют ожидаемым.
+        '''
         super().__init__()
         picture = pg.image.load(Signs_path + file_name)
         self.image = pg.transform.scale(picture,(cell_size,cell_size))
@@ -11,17 +26,25 @@ class Sign(pg.sprite.Sprite):
         self.points = points
         self.field_name = field_name
 
-    def move_to_cell(self,cell):
-        self.rect = cell.rect.copy()
-        self.field_name = cell.field_name
-
-    def move_to_hand_cell(self,hand_cell):
-        self.rect = hand_cell.rect.copy()
-        self.field_name = hand_cell.field_name
-
 
 class Sign_0(Sign):
     def __init__(self, cell_size: int, points: str, field: str):
+        '''
+        Инициализирует объект класса Sign_0, который является наследником класса Sign.
+        Загружает и масштабирует изображение, а также сохраняет переданные параметры.
+
+        :param cell_size: Размер клетки, на который будет масштабировано изображение.
+        :type cell_size: int
+        :param points: Строка, содержащая информацию о баллах или другой информации, связанной с объектом.
+        :type points: str
+        :param field: Название поля, к которому относится объект.
+        :type field: str
+
+        :returns: None
+        :rtype: None
+        :raises TypeError: Если типы переданных аргументов не соответствуют ожидаемым.
+        
+        '''
         super().__init__(cell_size, points, field, '0.png')
 
 

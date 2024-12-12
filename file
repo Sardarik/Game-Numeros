@@ -1,0 +1,29 @@
+display allows uniform access to your video display, while joystick allows abstract control of your joystick
+
+pygame.locals
+https://www.pygame.org/docs/ref/locals.html
+
+Dealing with events is referred to as handling them, and the code to do so is called an event handler.
+
+Every event in pygame has an event type associated with it.
+
+Blit - Block surface
+.blit() puts the top-left corner of surf at the location given
+
+sprite is a 2D representation of something on the screen
+https://en.wikipedia.org/wiki/Sprite_%28computer_graphics%29
+https://www.pygame.org/docs/ref/sprite.html
+
+
+поле
+функция drag and drop
+randomizer 
+кнопки для завершения игры
+правильность выражений
+
+
+
+В class указываем self, 
+
+
+super().__init__() ??????

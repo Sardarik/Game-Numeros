@@ -27,3 +27,15 @@ randomizer
 
 
 super().__init__() ??????
+
+
+'''
+        
+
+:param number: 
+:type number:
+:returns: 
+:rtype: 
+:raises TypeError: 
+
+'''

@@ -1,0 +1,1676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>visual.GameArea</title>
+    <meta name="generator" content="pydoctor 24.11.0"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          visual <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="visual.GameArea.html" class="internal-link" title="This class"><wbr></wbr>Game<wbr></wbr>Area</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="visual.GameArea.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#btn_down" class="internal-link" title="visual.GameArea.btn_down">btn<wbr></wbr>_down</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#btn_up" class="internal-link" title="visual.GameArea.btn_up">btn<wbr></wbr>_up</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#create_sign" class="internal-link" title="visual.GameArea.create_sign">create<wbr></wbr>_sign</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get_sign" class="internal-link" title="visual.GameArea.get_sign">get<wbr></wbr>_sign</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__clear_player_hand" class="internal-link" title="visual.GameArea.__clear_player_hand">__clear<wbr></wbr>_player<wbr></wbr>_hand</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__create_all_cells" class="internal-link" title="visual.GameArea.__create_all_cells">__create<wbr></wbr>_all<wbr></wbr>_cells</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__create_hand" class="internal-link" title="visual.GameArea.__create_hand">__create<wbr></wbr>_hand</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_all_buttons" class="internal-link" title="visual.GameArea.__draw_all_buttons">__draw<wbr></wbr>_all<wbr></wbr>_buttons</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_all_signs" class="internal-link" title="visual.GameArea.__draw_all_signs">__draw<wbr></wbr>_all<wbr></wbr>_signs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_area" class="internal-link" title="visual.GameArea.__draw_area">__draw<wbr></wbr>_area</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_cells_on_playboard" class="internal-link" title="visual.GameArea.__draw_cells_on_playboard">__draw<wbr></wbr>_cells<wbr></wbr>_on<wbr></wbr>_playboard</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_enter" class="internal-link" title="visual.GameArea.__draw_enter">__draw<wbr></wbr>_enter</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_equal" class="internal-link" title="visual.GameArea.__draw_equal">__draw<wbr></wbr>_equal</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_field" class="internal-link" title="visual.GameArea.__draw_field">__draw<wbr></wbr>_field</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_hand" class="internal-link" title="visual.GameArea.__draw_hand">__draw<wbr></wbr>_hand</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__draw_score" class="internal-link" title="visual.GameArea.__draw_score">__draw<wbr></wbr>_score</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__get_cell" class="internal-link" title="visual.GameArea.__get_cell">__get<wbr></wbr>_cell</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__grand_update" class="internal-link" title="visual.GameArea.__grand_update">__grand<wbr></wbr>_update</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__setup_board" class="internal-link" title="visual.GameArea.__setup_board">__setup<wbr></wbr>_board</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#Font_text" class="internal-link" title="visual.GameArea.Font_text"><wbr></wbr>Font_text</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#player1_score" class="internal-link" title="visual.GameArea.player1_score">player1<wbr></wbr>_score</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#player2_score" class="internal-link" title="visual.GameArea.player2_score">player2<wbr></wbr>_score</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__all_buttons" class="internal-link" title="visual.GameArea.__all_buttons">__all<wbr></wbr>_buttons</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__all_cells" class="internal-link" title="visual.GameArea.__all_cells">__all<wbr></wbr>_cells</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__all_hand_cells" class="internal-link" title="visual.GameArea.__all_hand_cells">__all<wbr></wbr>_hand<wbr></wbr>_cells</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__all_signs" class="internal-link" title="visual.GameArea.__all_signs">__all<wbr></wbr>_signs</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__count" class="internal-link" title="visual.GameArea.__count">__count</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__hand_count_elements" class="internal-link" title="visual.GameArea.__hand_count_elements">__hand<wbr></wbr>_count<wbr></wbr>_elements</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__hand_count_lines" class="internal-link" title="visual.GameArea.__hand_count_lines">__hand<wbr></wbr>_count<wbr></wbr>_lines</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__screen" class="internal-link" title="visual.GameArea.__screen">__screen</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__signs_types" class="internal-link" title="visual.GameArea.__signs_types">__signs<wbr></wbr>_types</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__size" class="internal-link" title="visual.GameArea.__size">__size</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this class">visual</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="visual.Buttons.html" class="internal-link" title="visual.Buttons"><wbr></wbr>Buttons</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="visual.Cell.html" class="internal-link" title="visual.Cell"><wbr></wbr>Cell</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="visual.Equal.html" class="internal-link" title="visual.Equal"><wbr></wbr>Equal</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="visual.GameArea.html" class="internal-link" title="visual.GameArea"><wbr></wbr>Game<wbr></wbr>Area</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="visual.Sign.html" class="internal-link" title="visual.Sign"><wbr></wbr>Sign</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#checked_matrix" class="internal-link" title="visual.checked_matrix">checked<wbr></wbr>_matrix</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#move" class="internal-link" title="visual.move">move</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#number_of_the_move" class="internal-link" title="visual.number_of_the_move">number<wbr></wbr>_of<wbr></wbr>_the<wbr></wbr>_move</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#player1" class="internal-link" title="visual.player1">player1</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#player2" class="internal-link" title="visual.player2">player2</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#temp_move" class="internal-link" title="visual.temp_move">temp<wbr></wbr>_move</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="index.html#temp_sign" class="internal-link" title="visual.temp_sign">temp<wbr></wbr>_sign</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="index.html" class="internal-link">visual</a></code><wbr></wbr>.<code><a href="visual.GameArea.html" class="internal-link" title="visual.GameArea">GameArea</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">GameArea</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="visual.GameArea.__init__">GameArea(parent_surface, cell_count, cell_size, hand_cell_count_elements, hand_cell_count_lines)</a></code></p>
+          <p><a href="classIndex.html#visual.GameArea">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Класс, представляющий игровую область, содержащую клетки, кнопки и символы игры.</p>
+<p>Атрибуты:
+__screen (pg.Surface): Поверхность, на которой будет отрисовываться игровая область.
+__count (int): Количество клеток в игровом поле (размер поля).
+__size (int): Размер каждой клетки.
+__hand_count_elements (int): Количество элементов в руке игрока.
+__hand_count_lines (int): Количество строк в руке игрока.
+__signs_types (list): Список типов знаков для игры.
+__all_cells (pg.sprite.Group): Группа всех клеток на игровом поле.
+__all_signs (pg.sprite.Group): Группа всех символов на игровом поле.
+__all_hand_cells (pg.sprite.Group): Группа клеток в руке игрока.
+__all_buttons (pg.sprite.Group): Группа кнопок для управления игрой.
+player1_score (int): Очки игрока 1.
+player2_score (int): Очки игрока 2.
+Font_text (pg.font.Font): Шрифт для отображения текста (например, очков).</p>
+</div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id7">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="visual.GameArea.__init__">__init__</a></code></td>
+    <td>Инициализирует игровую область.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#btn_down" class="internal-link" title="visual.GameArea.btn_down">btn<wbr></wbr>_down</a></code></td>
+    <td>Обрабатывает нажатие кнопки на игровом поле и выполняет действие, связанное с этим нажатием.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#btn_up" class="internal-link" title="visual.GameArea.btn_up">btn<wbr></wbr>_up</a></code></td>
+    <td>Обрабатывает отпускание кнопки на игровом поле, выполняя необходимые действия после завершения хода.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#create_sign" class="internal-link" title="visual.GameArea.create_sign">create<wbr></wbr>_sign</a></code></td>
+    <td>Создает новый объект знака на основе предоставленного типа знака и ячейки.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get_sign" class="internal-link" title="visual.GameArea.get_sign">get<wbr></wbr>_sign</a></code></td>
+    <td>Находит и выбирает знак по переданной позиции на экране.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#Font_text" class="internal-link" title="visual.GameArea.Font_text"><wbr></wbr>Font_text</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#player1_score" class="internal-link" title="visual.GameArea.player1_score">player1<wbr></wbr>_score</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#player2_score" class="internal-link" title="visual.GameArea.player2_score">player2<wbr></wbr>_score</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__clear_player_hand" class="internal-link" title="visual.GameArea.__clear_player_hand">__clear<wbr></wbr>_player<wbr></wbr>_hand</a></code></td>
+    <td>Очищает руку игрока от всех знаков.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__create_all_cells" class="internal-link" title="visual.GameArea.__create_all_cells">__create<wbr></wbr>_all<wbr></wbr>_cells</a></code></td>
+    <td>Создаёт все клетки на игровом поле.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__create_hand" class="internal-link" title="visual.GameArea.__create_hand">__create<wbr></wbr>_hand</a></code></td>
+    <td>Создаёт клетки для руки игрока.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_all_buttons" class="internal-link" title="visual.GameArea.__draw_all_buttons">__draw<wbr></wbr>_all<wbr></wbr>_buttons</a></code></td>
+    <td>Отрисовывает все кнопки на игровом экране, включая кнопку равенства и кнопку ввода.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_all_signs" class="internal-link" title="visual.GameArea.__draw_all_signs">__draw<wbr></wbr>_all<wbr></wbr>_signs</a></code></td>
+    <td>Отображает все знаки на игровом поле.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_area" class="internal-link" title="visual.GameArea.__draw_area">__draw<wbr></wbr>_area</a></code></td>
+    <td>Рисует игровую область, включая поле и руку игрока.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_cells_on_playboard" class="internal-link" title="visual.GameArea.__draw_cells_on_playboard">__draw<wbr></wbr>_cells<wbr></wbr>_on<wbr></wbr>_playboard</a></code></td>
+    <td>Отображает клетки на игровом поле с учётом смещения.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_enter" class="internal-link" title="visual.GameArea.__draw_enter">__draw<wbr></wbr>_enter</a></code></td>
+    <td>Отрисовывает кнопку "Enter" на игровом экране.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_equal" class="internal-link" title="visual.GameArea.__draw_equal">__draw<wbr></wbr>_equal</a></code></td>
+    <td>Отрисовывает кнопку равенства на игровом экране.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_field" class="internal-link" title="visual.GameArea.__draw_field">__draw<wbr></wbr>_field</a></code></td>
+    <td>Рисует игровое поле.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_hand" class="internal-link" title="visual.GameArea.__draw_hand">__draw<wbr></wbr>_hand</a></code></td>
+    <td>Рисует руку игрока (набора клеток).</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__draw_score" class="internal-link" title="visual.GameArea.__draw_score">__draw<wbr></wbr>_score</a></code></td>
+    <td>Отображает текущие очки игроков на экране.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__get_cell" class="internal-link" title="visual.GameArea.__get_cell">__get<wbr></wbr>_cell</a></code></td>
+    <td>Возвращает ячейку на игровом поле, которая не занята, по указанной позиции.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__grand_update" class="internal-link" title="visual.GameArea.__grand_update">__grand<wbr></wbr>_update</a></code></td>
+    <td>Выполняет полный обновление экрана, рисуя все объекты игры.</td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#__setup_board" class="internal-link" title="visual.GameArea.__setup_board">__setup<wbr></wbr>_board</a></code></td>
+    <td>Настраивает начальное состояние игрового поля, заполняя все клетки на руке случайными знаками.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__all_buttons" class="internal-link" title="visual.GameArea.__all_buttons">__all<wbr></wbr>_buttons</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__all_cells" class="internal-link" title="visual.GameArea.__all_cells">__all<wbr></wbr>_cells</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__all_hand_cells" class="internal-link" title="visual.GameArea.__all_hand_cells">__all<wbr></wbr>_hand<wbr></wbr>_cells</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__all_signs" class="internal-link" title="visual.GameArea.__all_signs">__all<wbr></wbr>_signs</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__count" class="internal-link" title="visual.GameArea.__count">__count</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__hand_count_elements" class="internal-link" title="visual.GameArea.__hand_count_elements">__hand<wbr></wbr>_count<wbr></wbr>_elements</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__hand_count_lines" class="internal-link" title="visual.GameArea.__hand_count_lines">__hand<wbr></wbr>_count<wbr></wbr>_lines</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__screen" class="internal-link" title="visual.GameArea.__screen">__screen</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__signs_types" class="internal-link" title="visual.GameArea.__signs_types">__signs<wbr></wbr>_types</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#__size" class="internal-link" title="visual.GameArea.__size">__size</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="visual.GameArea.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, parent_surface: <code>pg.Surface</code>, cell_count: <code>int</code> = CELL_COUNT, cell_size: <code>int</code> = CELL_SIZE, hand_cell_count_elements: <code>int</code> = HAND_CELL_COUNT_ELEMENTS, hand_cell_count_lines: <code>int</code> = HAND_CELL_COUNT_LINES)</span>:
+    
+    <a class="headerLink" href="#__init__" title="visual.GameArea.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Инициализирует игровую область.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">parent<wbr></wbr>_surface:</span>pg.Surface</td><td class="fieldArgDesc">Поверхность Pygame, на которой будет рисоваться игровая область.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cell<wbr></wbr>_count:</span>int, по умолчанию CELL_COUNT</td><td class="fieldArgDesc">Количество клеток по вертикали и горизонтали на игровом поле.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cell<wbr></wbr>_size:</span>int, по умолчанию CELL_SIZE</td><td class="fieldArgDesc">Размер одной клетки.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">hand<wbr></wbr>_cell<wbr></wbr>_count<wbr></wbr>_elements:</span>int, по умолчанию HAND_CELL_COUNT_ELEMENTS</td><td class="fieldArgDesc">Количество элементов в руке игрока.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">hand<wbr></wbr>_cell<wbr></wbr>_count<wbr></wbr>_lines:</span>int, по умолчанию HAND_CELL_COUNT_LINES</td><td class="fieldArgDesc">Количество строк в руке игрока.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если параметры некорректны (например, неверное количество клеток или размер).</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="visual.GameArea.btn_down">
+    
+  </a>
+  <a name="btn_down">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">btn_down</span><span class="function-signature">(self, button_type: <code>int</code>, position: <code>tuple</code>)</span>:
+    
+    <a class="headerLink" href="#btn_down" title="visual.GameArea.btn_down">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Обрабатывает нажатие кнопки на игровом поле и выполняет действие, связанное с этим нажатием.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">button<wbr></wbr>_type:</span>int</td><td class="fieldArgDesc">Тип кнопки, которая была нажата.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span>tuple</td><td class="fieldArgDesc">Позиция на экране, где пользователь нажал для выполнения действия.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">None</td><td class="fieldArgDesc">None</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Может быть выброшено, если произошла ошибка при обработке события.</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="visual.GameArea.btn_up">
+    
+  </a>
+  <a name="btn_up">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">btn_up</span><span class="function-signature">(self, button_type: <code>int</code>, position: <code>tuple</code>)</span>:
+    
+    <a class="headerLink" href="#btn_up" title="visual.GameArea.btn_up">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Обрабатывает отпускание кнопки на игровом поле, выполняя необходимые действия после завершения хода.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">button<wbr></wbr>_type:</span>int</td><td class="fieldArgDesc">Тип кнопки, которая была отпущена.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span>tuple</td><td class="fieldArgDesc">Позиция на экране, где пользователь отпустил кнопку.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">None</td><td class="fieldArgDesc">None</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Может быть выброшено, если произошла ошибка при обработке события.</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="visual.GameArea.create_sign">
+    
+  </a>
+  <a name="create_sign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">create_sign</span><span class="function-signature">(self, sign: <code>str</code>, cell: <code><a href="visual.Cell.html" class="internal-link" title="visual.Cell">Cell</a></code>)</span>:
+    
+    <a class="headerLink" href="#create_sign" title="visual.GameArea.create_sign">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Создает новый объект знака на основе предоставленного типа знака и ячейки.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">sign:</span>str</td><td class="fieldArgDesc">Тип знака, который должен быть отображен.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cell:</span>Cell</td><td class="fieldArgDesc">Ячейка, в которой должен быть размещен знак.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">Sign</td><td class="fieldArgDesc">Новый объект <code><a href="visual.Sign.html" class="internal-link" title="visual.Sign">Sign</a></code>, который будет отображаться на игровом поле.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникает ошибка при создании знака или если предоставлены некорректные данные.</td></tr></table></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="visual.GameArea.get_sign">
+    
+  </a>
+  <a name="get_sign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get_sign</span><span class="function-signature">(self, position)</span>:
+    
+    <a class="headerLink" href="#get_sign" title="visual.GameArea.get_sign">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Находит и выбирает знак по переданной позиции на экране.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span>tuple</td><td class="fieldArgDesc">Позиция на экране, где пользователь предполагает выбрать знак.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">None</td><td class="fieldArgDesc">None</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если при выборе знака произошла ошибка.</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="visual.GameArea.Font_text">
+    
+  </a>
+  <a name="Font_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">Font_text</span> =
+    
+    <a class="headerLink" href="#Font_text" title="visual.GameArea.Font_text">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="visual.GameArea.player1_score">
+    
+  </a>
+  <a name="player1_score">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">player1_score</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#player1_score" title="visual.GameArea.player1_score">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="visual.GameArea.player2_score">
+    
+  </a>
+  <a name="player2_score">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">player2_score</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#player2_score" title="visual.GameArea.player2_score">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__clear_player_hand">
+    
+  </a>
+  <a name="__clear_player_hand">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__clear_player_hand</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__clear_player_hand" title="visual.GameArea.__clear_player_hand">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Очищает руку игрока от всех знаков.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Может быть выброшено, если возникла ошибка при очистке руки игрока.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__create_all_cells">
+    
+  </a>
+  <a name="__create_all_cells">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__create_all_cells</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__create_all_cells" title="visual.GameArea.__create_all_cells">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Создаёт все клетки на игровом поле.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">pg.sprite.Group</td><td class="fieldArgDesc">Группа спрайтов всех клеток поля.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникла ошибка при создании клетки.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__create_hand">
+    
+  </a>
+  <a name="__create_hand">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__create_hand</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__create_hand" title="visual.GameArea.__create_hand">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Создаёт клетки для руки игрока.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">pg.sprite.Group</td><td class="fieldArgDesc">Группа спрайтов клеток руки игрока.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникла ошибка при создании клетки.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_all_buttons">
+    
+  </a>
+  <a name="__draw_all_buttons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_all_buttons</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_all_buttons" title="visual.GameArea.__draw_all_buttons">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отрисовывает все кнопки на игровом экране, включая кнопку равенства и кнопку ввода.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникает ошибка при отрисовке кнопок.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_all_signs">
+    
+  </a>
+  <a name="__draw_all_signs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_all_signs</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_all_signs" title="visual.GameArea.__draw_all_signs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отображает все знаки на игровом поле.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если произошла ошибка при установке или отрисовке знаков.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_area">
+    
+  </a>
+  <a name="__draw_area">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_area</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_area" title="visual.GameArea.__draw_area">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует игровую область, включая поле и руку игрока.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если в процессе рисования возникает ошибка (например, неверные координаты или размер).</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_cells_on_playboard">
+    
+  </a>
+  <a name="__draw_cells_on_playboard">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_cells_on_playboard</span><span class="function-signature">(self, cells_to_draw, cell_offset)</span>:
+    
+    <a class="headerLink" href="#__draw_cells_on_playboard" title="visual.GameArea.__draw_cells_on_playboard">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отображает клетки на игровом поле с учётом смещения.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cells<wbr></wbr>_to<wbr></wbr>_draw:</span>pg.sprite.Group</td><td class="fieldArgDesc">Клетки, которые необходимо отобразить на поле.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">cell<wbr></wbr>_offset:</span>tuple[int, int]</td><td class="fieldArgDesc">Смещение для отображения клеток (по осям X и Y).</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если произошла ошибка при отрисовке клеток.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_enter">
+    
+  </a>
+  <a name="__draw_enter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_enter</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_enter" title="visual.GameArea.__draw_enter">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отрисовывает кнопку "Enter" на игровом экране.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникает ошибка при отрисовке кнопки.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_equal">
+    
+  </a>
+  <a name="__draw_equal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_equal</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_equal" title="visual.GameArea.__draw_equal">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отрисовывает кнопку равенства на игровом экране.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникает ошибка при отрисовке кнопки.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_field">
+    
+  </a>
+  <a name="__draw_field">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_field</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_field" title="visual.GameArea.__draw_field">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует игровое поле.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникла ошибка при создании или рисовании клеток.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_hand">
+    
+  </a>
+  <a name="__draw_hand">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_hand</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_hand" title="visual.GameArea.__draw_hand">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Рисует руку игрока (набора клеток).</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникла ошибка при создании или рисовании клеток руки.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__draw_score">
+    
+  </a>
+  <a name="__draw_score">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__draw_score</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__draw_score" title="visual.GameArea.__draw_score">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отображает текущие очки игроков на экране.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Может быть выброшено, если произошла ошибка при отображении счета.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__get_cell">
+    
+  </a>
+  <a name="__get_cell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__get_cell</span><span class="function-signature">(self, position: <code>tuple</code>)</span>:
+    
+    <a class="headerLink" href="#__get_cell" title="visual.GameArea.__get_cell">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Возвращает ячейку на игровом поле, которая не занята, по указанной позиции.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">position:</span>tuple</td><td class="fieldArgDesc">Позиция на экране, где должна находиться ячейка.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">Cell or None</td><td class="fieldArgDesc">Ячейка, которая не занята, или None, если такая ячейка не найдена.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если при проверке возникла ошибка.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__grand_update">
+    
+  </a>
+  <a name="__grand_update">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__grand_update</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__grand_update" title="visual.GameArea.__grand_update">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Выполняет полный обновление экрана, рисуя все объекты игры.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Может быть выброшено, если произошла ошибка при рисовании объектов.</td></tr></table></div>
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="visual.GameArea.__setup_board">
+    
+  </a>
+  <a name="__setup_board">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__setup_board</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__setup_board" title="visual.GameArea.__setup_board">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Настраивает начальное состояние игрового поля, заполняя все клетки на руке случайными знаками.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если возникает ошибка при установке знаков для ячеек.</td></tr></table></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__all_buttons">
+    
+  </a>
+  <a name="__all_buttons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__all_buttons</span> =
+    
+    <a class="headerLink" href="#__all_buttons" title="visual.GameArea.__all_buttons">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__all_cells">
+    
+  </a>
+  <a name="__all_cells">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__all_cells</span> =
+    
+    <a class="headerLink" href="#__all_cells" title="visual.GameArea.__all_cells">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__all_hand_cells">
+    
+  </a>
+  <a name="__all_hand_cells">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__all_hand_cells</span> =
+    
+    <a class="headerLink" href="#__all_hand_cells" title="visual.GameArea.__all_hand_cells">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__all_signs">
+    
+  </a>
+  <a name="__all_signs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__all_signs</span> =
+    
+    <a class="headerLink" href="#__all_signs" title="visual.GameArea.__all_signs">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__count">
+    
+  </a>
+  <a name="__count">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__count</span> =
+    
+    <a class="headerLink" href="#__count" title="visual.GameArea.__count">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__hand_count_elements">
+    
+  </a>
+  <a name="__hand_count_elements">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__hand_count_elements</span> =
+    
+    <a class="headerLink" href="#__hand_count_elements" title="visual.GameArea.__hand_count_elements">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__hand_count_lines">
+    
+  </a>
+  <a name="__hand_count_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__hand_count_lines</span> =
+    
+    <a class="headerLink" href="#__hand_count_lines" title="visual.GameArea.__hand_count_lines">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__screen">
+    
+  </a>
+  <a name="__screen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__screen</span> =
+    
+    <a class="headerLink" href="#__screen" title="visual.GameArea.__screen">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__signs_types">
+    
+  </a>
+  <a name="__signs_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__signs_types</span> =
+    
+    <a class="headerLink" href="#__signs_types" title="visual.GameArea.__signs_types">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="visual.GameArea.__size">
+    
+  </a>
+  <a name="__size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">__size</span> =
+    
+    <a class="headerLink" href="#__size" title="visual.GameArea.__size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for visual,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.0 at 2024-12-14 11:34:03.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

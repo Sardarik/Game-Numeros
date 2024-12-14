@@ -1,5 +1,4 @@
 from random import choice
-import pygame as pg
 #every constant
 FPS = 15
 WINDOW_SIZE = [800,750]
@@ -17,7 +16,7 @@ HAND_CELL_COUNT_LINES = 2
 all_field_cells = []
 SIGNS_PATH = '/Users/aidasardarova/Documents/HSE/АиП/Numeros/Images/Signs/'
 SIGNS_ARRAY = ['0','1','2','3','4','5','6','7','8','9','+','-','*',':']
-FONT_TEXT = pg.font.SysFont('applemyungjo', 30)
+
 
 BUTTONS_PATH = '/Users/aidasardarova/Documents/HSE/АиП/Numeros/Images/Buttons/'
 

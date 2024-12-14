@@ -208,7 +208,7 @@ class GameArea:
         self.player1_score = 0
         self.player2_score = 0
 
-        self.Font_text = FONT_TEXT
+        self.Font_text = pg.font.SysFont('applemyungjo', 30)
 
 
     def __draw_area(self):
@@ -467,10 +467,8 @@ class GameArea:
             print(after_move)
             print(player1, player2)
 
-            if after_move[0] == 0:  
-                pass
-            elif after_move[0] == 1:
-                pass  
+            self.player1_score=player1  
+            self.player2_score=player2 
             
             self.__clear_player_hand()   
             self.__setup_board()

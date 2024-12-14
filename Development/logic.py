@@ -84,11 +84,13 @@ def correctness_of_the_move(move, number_of_the_move, player1, player2, checked_
 
 
 
-    elif all(move[0][j] == move[0][j+1] for j in range(len(move)-1)):
+    elif all(move[j][0] == move[j+1][0] for j in range(len(move)-1)):
         move = merge_sort_by_x(move)
         left_pointer = 0
         right_pointer =  0
         hor = move[0][0]
+        
+        example = ''
 
         for i in range(move[0][1],15):
             if current_matrix[hor][i] == '-1': break

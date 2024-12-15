@@ -1,5 +1,5 @@
 #тесты для функции мерджа по икс и по игрек
-
+import unittest
 import pytest
 from visual import *
 
@@ -97,4 +97,131 @@ def test_invalid_arithmetic_expression():
     assert result[1] == 0  # номер хода не изменился
     assert result[2] == 0  # очки игрока 1 остались прежними
     assert result[3] == 0  # очки игрока 2 остались прежними
+
+
+IMG_PATH = '/Users/aidasardarova/Documents/HSE/АиП/Numeros/Images/'
+IMAGE = ["image_0.png", "image_1.png"]  
+
+class TestCell(unittest.TestCase):
+
+    def test_cell_initialization(self):
+        """ Положительный тест: проверка корректной инициализации ячейки. """
+        pg.init()
+        
+        color_index = 1
+        size = 50
+        coord = (5, 10)
+        
+        cell = Cell(color_index, size, coord)
+        
+        self.assertEqual(cell.x, 5) 
+        self.assertEqual(cell.y, 10)
+        self.assertEqual(cell.color, color_index) 
+        self.assertEqual(cell.image.get_size(), (size, size)) 
+        self.assertEqual(cell.rect.x, 5 * size) 
+        self.assertEqual(cell.rect.y, 10 * size)  
+        self.assertEqual(cell.rect.width, size)  
+        self.assertEqual(cell.rect.height, size) 
+        self.assertEqual(cell.sign, "")  
+        self.assertFalse(cell.is_occupated) 
+        self.assertFalse(cell.is_anchored) 
+        pg.quit()
+
+    def test_invalid_size(self):
+        """ Отрицательный тест: проверка инициализации с некорректным размером ячейки. """
+        pg.init()
+        color_index = 1
+        coord = (5, 5)
+        
+        size = -50
+        with self.assertRaises(ValueError):
+            Cell(color_index, size, coord)
+        pg.quit()
+            
+            
+
+
+BUTTONS_PATH = '/Users/aidasardarova/Documents/HSE/АиП/Numeros/Images/Buttons/' 
+IMAGE = ["Enter.png", "re.png"]  
+
+class TestButtons(unittest.TestCase):
+
+
+    def test_button_initialization(self):
+        """ Положительный тест: проверка правильной инициализации кнопки."""
+        pg.init()
+        
+        size = 50
+        coord = (100, 150)
+        file_name = "Enter.png"  
+        
+        button = Buttons(size, coord, file_name)
+        
+   
+        self.assertEqual(button.x, 100) 
+        self.assertEqual(button.y, 150) 
+        self.assertEqual(button.image.get_size(), (size, size)) 
+        self.assertEqual(button.rect.x, 100)  
+        self.assertEqual(button.rect.y, 150)  
+        self.assertEqual(button.rect.width, size)  
+        self.assertEqual(button.rect.height, size) 
+        pg.quit()
+    
+    def test_invalid_image_file(self):
+        """ Отрицательный тест: проверка инициализации с неправильным файлом изображения. """
+        pg.init()
+        
+        size = 50
+        coord = (100, 150)
+        file_name = "nonexistent_button.png"  
+
+    
+        with self.assertRaises(FileNotFoundError):
+            Buttons(size, coord, file_name)
+        pg.quit()
+
+
+
+
+
+
+
+class TestGameArea(unittest.TestCase):
+    def test_game_area_creation(self):
+        """Проверяет, что игровой объект GameArea создается корректно с правильными параметрами."""
+        pg.init()
+        
+        screen = pg.display.set_mode((800, 600)) 
+        cell_count = 10
+        cell_size = 50
+        hand_cell_count_elements = 5
+        hand_cell_count_lines = 2
+        game_area = GameArea(screen, cell_count, cell_size, hand_cell_count_elements, hand_cell_count_lines)
+        
+        self.assertEqual(game_area._GameArea__count, cell_count)
+        self.assertEqual(game_area._GameArea__size, cell_size)
+        self.assertEqual(game_area._GameArea__hand_count_elements, hand_cell_count_elements)
+        self.assertEqual(game_area._GameArea__hand_count_lines, hand_cell_count_lines)
+        self.assertIsInstance(game_area._GameArea__all_cells, pg.sprite.Group)
+        self.assertIsInstance(game_area._GameArea__all_signs, pg.sprite.Group)
+        self.assertIsInstance(game_area._GameArea__all_hand_cells, pg.sprite.Group)
+        self.assertIsInstance(game_area._GameArea__all_buttons, pg.sprite.Group)
+        pg.quit()
+
+
+    def test_invalid_parameters(self):
+        """Проверяет, что при некорректных параметрах конструктора выбрасывается ошибка."""
+        pg.init()
+        screen = pg.display.set_mode((800, 600))  
+
+        invalid_cell_count = -5
+        invalid_cell_size = -50
+        invalid_hand_cell_count_elements = 0
+        invalid_hand_cell_count_lines = -2
+        
+
+        with self.assertRaises(ValueError):
+            game_area = GameArea(screen, invalid_cell_count, invalid_cell_size, invalid_hand_cell_count_elements, invalid_hand_cell_count_lines)
+        
+        pg.quit()
 

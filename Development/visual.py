@@ -405,7 +405,7 @@ class GameArea:
         for sign in self.__all_signs:
             if sign.rect.collidepoint(position) and not sign.cell.is_anchored:
                 temp_sign=sign
-                return
+                return sign
         temp_sign=None
 
     def btn_down(self, button_type: int, position: tuple):

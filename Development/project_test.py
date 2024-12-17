@@ -225,3 +225,62 @@ class TestGameArea(unittest.TestCase):
         
         pg.quit()
 
+
+
+from unittest.mock import MagicMock
+
+class TestGameArea(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        pg.init()  
+        cls.display = pg.display.set_mode((800, 600)) 
+
+    @classmethod
+    def tearDownClass(cls):
+        pg.quit()  
+
+    def setUp(self):
+        parent_surface = TestGameArea.display 
+        self.game_area = GameArea(parent_surface) 
+        self.sign_mock = MagicMock()
+        self.sign_mock.rect.collidepoint = MagicMock()
+        self.sign_mock.cell.is_anchored = False
+        self.game_area._GameArea__all_signs = [self.sign_mock]
+
+       
+        self.cell_mock = MagicMock()
+        self.cell_mock.rect.collidepoint = MagicMock()
+        self.cell_mock.is_occupated = False
+        self.game_area._GameArea__all_cells = [self.cell_mock]
+
+    def test_get_sign_positive(self):
+        """Положительный тест: знак найден и возвращён."""
+        self.sign_mock.rect.collidepoint.return_value = True
+        position = (100, 100)
+        result = self.game_area.get_sign(position)
+        self.assertEqual(result, self.sign_mock)
+
+    def test_get_sign_negative(self):
+        """Отрицательный тест: знак не найден."""
+        self.sign_mock.rect.collidepoint.return_value = False
+        position = (200, 200)
+        result = self.game_area.get_sign(position)
+        self.assertIsNone(result)
+
+    def test_get_cell_positive(self):
+        """Положительный тест: ячейка найдена и не занята."""
+        self.cell_mock.rect.collidepoint.return_value = True
+        self.cell_mock.is_occupated = False
+        position = (50, 50)
+        result = self.game_area._GameArea__get_cell(position)
+        self.assertEqual(result, self.cell_mock)
+
+    def test_get_cell_negative(self):
+        """Отрицательный тест: ячейка не найдена или занята."""
+        self.cell_mock.rect.collidepoint.return_value = False
+        position = (200, 200)
+        result = self.game_area._GameArea__get_cell(position)
+        self.assertIsNone(result)
+
+if __name__ == "__main__":
+    unittest.main()
